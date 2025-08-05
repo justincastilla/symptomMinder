@@ -1,8 +1,11 @@
+# ⚠️ Developer NOTE ⚠️ :
+ > This project is currently in development and is not at all ready for production. The purpose is to document possibly sensitive medical information and provide a platform for analysis and visualization. There should be absolutely NO assumption of data privacy or security in this demonstration. Advice or instructions given by the seror or the llm should be taken with a grain of salt. This application demo and proof of concept is not intended for medical use and should not be used as a substitute for professional medical advice.
+
 # SymptomMinder FastMCP Server
 
 This project is an MCP server built with FastMCP for recording symptoms and related environmental/body information, storing it in Elasticsearch, and supporting integration with Claude Desktop for user review and visualization.
 
-# Motivation
+## Motivation
 Now more than ever, people are empowering themselves with tools to better understand their health and well-being. With the rise of AI and machine learning, we can use these tools to better understand our individual health through data collection and analysis. Sickness and wellness are complex, and we can't always know what the big picture is. By recording and analyzing our symptoms and related information, we can better understand our health and make informed decisions about our care. 
 
 By recording symptoms and surrounding information, we can possibly identify patterns and correlations that we might not otherwise notice. This can help us better understand our health and make informed decisions about our care. We all know at least three people who have a "silent" condition that may not have an outward appearance, but may be causing them significant discomfort, pain, or disability. By creating and maintaining a record of their physical experience, we hope to provide documentation and support for their care. 
@@ -120,5 +123,9 @@ The server will start on `http://localhost:6274` by default. The terminal will p
 
 - Ensure your Elasticsearch instance is running and accessible at the configured URL.
 - For production deployments, configure authentication and secure your Elasticsearch instance and MCP server accordingly.
-
 ---
+
+
+### 7. Future Improvements
+
+

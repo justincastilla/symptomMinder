@@ -1,0 +1,43 @@
+{
+    "_index": "event_summaries",
+    "_id": "Ba8jfJgBNsXFZ2nR384h",
+    "_version": 1,
+    "_ignored": [
+      "jury_prompt.keyword",
+      "jury_report.keyword"
+    ],
+    "_source": {
+      "event_id": "BK8dfJgBNsXFZ2nRuc5Z",
+      "jury_report": "## Missing/Misrepresented Information\n\n**Missing from structured entry:**\n- **Duration/timing**: \"started 40 minutes ago\" - not captured in `length_minutes`\n- **Trigger/context**: \"sleeping on my side\" during \"normal midday nap\" - not captured in `cause` or `environmental`\n- **Progression**: \"slowly dissipating\" - not captured in `intensity_pattern`\n- **Dietary context**: \"haven't eaten anything weird\" - could be relevant for `environmental`\n- **History**: \"never happened before\" - not captured anywhere\n- **Raw notes**: The original user input is missing from `raw_notes` field\n- **Onset type**: Could be inferred as \"gradual\" but left null\n\n**Correctly captured:**\n- Symptom description accurately summarizes \"left arm numbness\" and \"pins and needles\"\n- Severity rating of 4 is correctly recorded\n\n## Faithfulness Rating: 6/10\n\n## Summary of Discrepancies\n\nThe structured entry captures the core symptom and severity well, but loses significant contextual information. Key missing elements include the 40-minute duration, the sleeping position as a likely trigger, the improving trend, and the patient's medical history (first occurrence). The entry also fails to populate several relevant fields that could provide valuable clinical context, such as onset type, intensity pattern, and potential causative factors.",
+      "jury_prompt": "Compare the following raw user notes with the finalized structured symptom entry.\n- Identify any information in the notes that is missing or misrepresented in the entry.\n- Rate the faithfulness of the structured entry to the user's notes on a scale of 1-10.\n- Provide a brief summary of any discrepancies.\n\nRaw Notes:\nMy left arm is a bit numb. It started 40 minutes ago. It's slightly numb, so I'd give it a 4. I was sleeping on my side. It feels like pins and needles. It's slowly disapating. I haven't eaten anything weird. I was just takign my normal midday nap. This has never happneed before.\n\nStructured Entry (JSON):\n{\n  \"tags\": null,\n  \"user_id\": null,\n  \"timestamp\": \"2025-08-05T14:00:00Z\",\n  \"environmental\": null,\n  \"symptom_details\": {\n    \"cause\": null,\n    \"symptom\": \"Left arm numbness with pins and needles sensation\",\n    \"severity\": 4,\n    \"raw_notes\": null,\n    \"onset_type\": null,\n    \"on_medication\": null,\n    \"event_complete\": null,\n    \"length_minutes\": null,\n    \"relief_factors\": null,\n    \"intensity_pattern\": null,\n    \"mediation_attempt\": null,\n    \"associated_symptoms\": null\n  }\n}",
+      "jury_model": "claude-sonnet-4-20250514"
+    },
+    "fields": {
+      "jury_prompt": [
+        "Compare the following raw user notes with the finalized structured symptom entry.\n- Identify any information in the notes that is missing or misrepresented in the entry.\n- Rate the faithfulness of the structured entry to the user's notes on a scale of 1-10.\n- Provide a brief summary of any discrepancies.\n\nRaw Notes:\nMy left arm is a bit numb. It started 40 minutes ago. It's slightly numb, so I'd give it a 4. I was sleeping on my side. It feels like pins and needles. It's slowly disapating. I haven't eaten anything weird. I was just takign my normal midday nap. This has never happneed before.\n\nStructured Entry (JSON):\n{\n  \"tags\": null,\n  \"user_id\": null,\n  \"timestamp\": \"2025-08-05T14:00:00Z\",\n  \"environmental\": null,\n  \"symptom_details\": {\n    \"cause\": null,\n    \"symptom\": \"Left arm numbness with pins and needles sensation\",\n    \"severity\": 4,\n    \"raw_notes\": null,\n    \"onset_type\": null,\n    \"on_medication\": null,\n    \"event_complete\": null,\n    \"length_minutes\": null,\n    \"relief_factors\": null,\n    \"intensity_pattern\": null,\n    \"mediation_attempt\": null,\n    \"associated_symptoms\": null\n  }\n}"
+      ],
+      "event_id": [
+        "BK8dfJgBNsXFZ2nRuc5Z"
+      ],
+      "jury_report": [
+        "## Missing/Misrepresented Information\n\n**Missing from structured entry:**\n- **Duration/timing**: \"started 40 minutes ago\" - not captured in `length_minutes`\n- **Trigger/context**: \"sleeping on my side\" during \"normal midday nap\" - not captured in `cause` or `environmental`\n- **Progression**: \"slowly dissipating\" - not captured in `intensity_pattern`\n- **Dietary context**: \"haven't eaten anything weird\" - could be relevant for `environmental`\n- **History**: \"never happened before\" - not captured anywhere\n- **Raw notes**: The original user input is missing from `raw_notes` field\n- **Onset type**: Could be inferred as \"gradual\" but left null\n\n**Correctly captured:**\n- Symptom description accurately summarizes \"left arm numbness\" and \"pins and needles\"\n- Severity rating of 4 is correctly recorded\n\n## Faithfulness Rating: 6/10\n\n## Summary of Discrepancies\n\nThe structured entry captures the core symptom and severity well, but loses significant contextual information. Key missing elements include the 40-minute duration, the sleeping position as a likely trigger, the improving trend, and the patient's medical history (first occurrence). The entry also fails to populate several relevant fields that could provide valuable clinical context, such as onset type, intensity pattern, and potential causative factors."
+      ],
+      "event_id.keyword": [
+        "BK8dfJgBNsXFZ2nRuc5Z"
+      ],
+      "jury_model": [
+        "claude-sonnet-4-20250514"
+      ],
+      "jury_model.keyword": [
+        "claude-sonnet-4-20250514"
+      ]
+    },
+    "ignored_field_values": {
+      "jury_report.keyword": [
+        "## Missing/Misrepresented Information\n\n**Missing from structured entry:**\n- **Duration/timing**: \"started 40 minutes ago\" - not captured in `length_minutes`\n- **Trigger/context**: \"sleeping on my side\" during \"normal midday nap\" - not captured in `cause` or `environmental`\n- **Progression**: \"slowly dissipating\" - not captured in `intensity_pattern`\n- **Dietary context**: \"haven't eaten anything weird\" - could be relevant for `environmental`\n- **History**: \"never happened before\" - not captured anywhere\n- **Raw notes**: The original user input is missing from `raw_notes` field\n- **Onset type**: Could be inferred as \"gradual\" but left null\n\n**Correctly captured:**\n- Symptom description accurately summarizes \"left arm numbness\" and \"pins and needles\"\n- Severity rating of 4 is correctly recorded\n\n## Faithfulness Rating: 6/10\n\n## Summary of Discrepancies\n\nThe structured entry captures the core symptom and severity well, but loses significant contextual information. Key missing elements include the 40-minute duration, the sleeping position as a likely trigger, the improving trend, and the patient's medical history (first occurrence). The entry also fails to populate several relevant fields that could provide valuable clinical context, such as onset type, intensity pattern, and potential causative factors."
+      ],
+      "jury_prompt.keyword": [
+        "Compare the following raw user notes with the finalized structured symptom entry.\n- Identify any information in the notes that is missing or misrepresented in the entry.\n- Rate the faithfulness of the structured entry to the user's notes on a scale of 1-10.\n- Provide a brief summary of any discrepancies.\n\nRaw Notes:\nMy left arm is a bit numb. It started 40 minutes ago. It's slightly numb, so I'd give it a 4. I was sleeping on my side. It feels like pins and needles. It's slowly disapating. I haven't eaten anything weird. I was just takign my normal midday nap. This has never happneed before.\n\nStructured Entry (JSON):\n{\n  \"tags\": null,\n  \"user_id\": null,\n  \"timestamp\": \"2025-08-05T14:00:00Z\",\n  \"environmental\": null,\n  \"symptom_details\": {\n    \"cause\": null,\n    \"symptom\": \"Left arm numbness with pins and needles sensation\",\n    \"severity\": 4,\n    \"raw_notes\": null,\n    \"onset_type\": null,\n    \"on_medication\": null,\n    \"event_complete\": null,\n    \"length_minutes\": null,\n    \"relief_factors\": null,\n    \"intensity_pattern\": null,\n    \"mediation_attempt\": null,\n    \"associated_symptoms\": null\n  }\n}"
+      ]
+    }
+  }

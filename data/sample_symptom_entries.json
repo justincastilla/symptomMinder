@@ -1,0 +1,434 @@
+[
+  {
+    "timestamp": "2025-08-04T08:30:00Z",
+    "user_id": "user_1",
+    "symptom_details": {
+      "symptom": "headache",
+      "severity": 7,
+      "length_minutes": 90,
+      "cause": "stress",
+      "mediation_attempt": "rest",
+      "on_medication": false,
+      "raw_notes": "Woke up with a pounding headache after a stressful evening. The pain was mostly on the right side and lasted about an hour and a half. Tried resting in a dark room, which helped a little. No medication taken. Felt slightly dizzy and sensitive to noise.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["dizziness", "sensitivity to noise"],
+      "relief_factors": "rest"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 68, "humidity": 50},
+      "activity_context": "waking up"
+    },
+    "tags": ["headache", "stress"]
+  },
+  {
+    "timestamp": "2025-08-03T14:15:00Z",
+    "user_id": "user_2",
+    "symptom_details": {
+      "symptom": "nausea",
+      "severity": 5,
+      "length_minutes": 45,
+      "cause": "unknown",
+      "mediation_attempt": "hydration",
+      "on_medication": false,
+      "raw_notes": "Felt nauseous after lunch. Unsure of the cause; no new foods eaten. Drank water and lay down, which seemed to help. No vomiting. Mild stomach cramps accompanied the nausea.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": ["stomach cramps"],
+      "relief_factors": "hydration"
+    },
+    "environmental": {
+      "location": "work",
+      "environmental_factors": {"temperature": 72, "humidity": 40},
+      "activity_context": "after lunch"
+    },
+    "tags": ["nausea", "unknown"]
+  },
+  {
+    "timestamp": "2025-08-02T19:00:00Z",
+    "user_id": "user_3",
+    "symptom_details": {
+      "symptom": "muscle pain",
+      "severity": 8,
+      "length_minutes": 120,
+      "cause": "exercise",
+      "mediation_attempt": "ice pack",
+      "on_medication": false,
+      "raw_notes": "Severe muscle pain in both thighs after an intense gym session. Pain started gradually but became constant by the evening. Used an ice pack and rested, which provided some relief. No swelling observed.",
+      "event_complete": false,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["fatigue"],
+      "relief_factors": "ice pack"
+    },
+    "environmental": {
+      "location": "gym",
+      "environmental_factors": {"temperature": 75, "humidity": 55},
+      "activity_context": "post-exercise"
+    },
+    "tags": ["muscle pain", "exercise"]
+  },
+  {
+    "timestamp": "2025-08-01T22:10:00Z",
+    "user_id": "user_1",
+    "symptom_details": {
+      "symptom": "insomnia",
+      "severity": 6,
+      "length_minutes": 180,
+      "cause": "anxiety",
+      "mediation_attempt": "none",
+      "on_medication": false,
+      "raw_notes": "Had trouble falling asleep due to racing thoughts. Stayed awake for about three hours, feeling restless and anxious. Did not take any sleep aids. Eventually fell asleep after listening to calming music.",
+      "event_complete": true,
+      "onset_type": "recurring",
+      "intensity_pattern": "intermittent",
+      "associated_symptoms": ["anxiety", "restlessness"],
+      "relief_factors": "calming music"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 65, "humidity": 60},
+      "activity_context": "bedtime"
+    },
+    "tags": ["insomnia", "anxiety"]
+  },
+  {
+    "timestamp": "2025-08-02T09:45:00Z",
+    "user_id": "user_2",
+    "symptom_details": {
+      "symptom": "fever",
+      "severity": 9,
+      "length_minutes": 240,
+      "cause": "infection",
+      "mediation_attempt": "medication",
+      "on_medication": true,
+      "raw_notes": "Woke up with a high fever and chills. Took acetaminophen, which lowered the temperature slightly. Felt weak and stayed in bed most of the morning. Sweating and headache also present.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["chills", "headache", "sweating"],
+      "relief_factors": "medication"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 70, "humidity": 65},
+      "activity_context": "waking up"
+    },
+    "tags": ["fever", "infection"]
+  },
+  {
+    "timestamp": "2025-08-03T17:20:00Z",
+    "user_id": "user_3",
+    "symptom_details": {
+      "symptom": "joint pain",
+      "severity": 4,
+      "length_minutes": 60,
+      "cause": "injury",
+      "mediation_attempt": "rest",
+      "on_medication": false,
+      "raw_notes": "Mild pain in left knee after bumping it against a table. Pain was dull and lasted about an hour. Rested with leg elevated. No swelling or bruising developed.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["none"],
+      "relief_factors": "rest"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 67, "humidity": 52},
+      "activity_context": "sitting"
+    },
+    "tags": ["joint pain", "injury"]
+  },
+  {
+    "timestamp": "2025-08-02T13:30:00Z",
+    "user_id": "user_1",
+    "symptom_details": {
+      "symptom": "sore throat",
+      "severity": 6,
+      "length_minutes": 120,
+      "cause": "infection",
+      "mediation_attempt": "hydration",
+      "on_medication": false,
+      "raw_notes": "Scratchy sore throat started after breakfast. Drank warm tea and water throughout the morning. No fever or cough. Throat felt better by lunchtime.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": ["scratchy throat"],
+      "relief_factors": "hydration"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 68, "humidity": 48},
+      "activity_context": "morning"
+    },
+    "tags": ["sore throat", "infection"]
+  },
+  {
+    "timestamp": "2025-08-04T11:10:00Z",
+    "user_id": "user_2",
+    "symptom_details": {
+      "symptom": "anxiety",
+      "severity": 8,
+      "length_minutes": 180,
+      "cause": "work stress",
+      "mediation_attempt": "none",
+      "on_medication": false,
+      "raw_notes": "Felt anxious all morning due to a heavy workload. Heart was racing and had trouble focusing. No medication taken. Tried deep breathing exercises, which helped slightly.",
+      "event_complete": false,
+      "onset_type": "recurring",
+      "intensity_pattern": "intermittent",
+      "associated_symptoms": ["palpitations", "trouble focusing"],
+      "relief_factors": "deep breathing"
+    },
+    "environmental": {
+      "location": "work",
+      "environmental_factors": {"temperature": 71, "humidity": 38},
+      "activity_context": "working"
+    },
+    "tags": ["anxiety", "work stress"]
+  },
+  {
+    "timestamp": "2025-08-03T08:00:00Z",
+    "user_id": "user_3",
+    "symptom_details": {
+      "symptom": "fatigue",
+      "severity": 5,
+      "length_minutes": 240,
+      "cause": "unknown",
+      "mediation_attempt": "rest",
+      "on_medication": false,
+      "raw_notes": "Felt unusually tired throughout the morning. Slept well the previous night. No other symptoms. Rested and drank coffee, which helped a bit.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["none"],
+      "relief_factors": "rest"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 69, "humidity": 44},
+      "activity_context": "morning"
+    },
+    "tags": ["fatigue", "unknown"]
+  },
+  {
+    "timestamp": "2025-08-04T16:40:00Z",
+    "user_id": "user_1",
+    "symptom_details": {
+      "symptom": "cough",
+      "severity": 3,
+      "length_minutes": 30,
+      "cause": "allergy",
+      "mediation_attempt": "none",
+      "on_medication": false,
+      "raw_notes": "Developed a dry cough while cleaning the house. Suspect dust allergy. No fever or sore throat. Cough subsided after leaving the room.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "intermittent",
+      "associated_symptoms": ["dry throat"],
+      "relief_factors": "leaving room"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 70, "humidity": 45},
+      "activity_context": "cleaning"
+    },
+    "tags": ["cough", "allergy"]
+  },
+  {
+    "timestamp": "2025-08-01T13:55:00Z",
+    "user_id": "user_2",
+    "symptom_details": {
+      "symptom": "palpitations",
+      "severity": 6,
+      "length_minutes": 20,
+      "cause": "anxiety",
+      "mediation_attempt": "rest",
+      "on_medication": false,
+      "raw_notes": "Felt heart palpitations during a stressful meeting. Lasted about 20 minutes. Rested afterward and symptoms resolved. No chest pain or dizziness.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "intermittent",
+      "associated_symptoms": ["anxiety"],
+      "relief_factors": "rest"
+    },
+    "environmental": {
+      "location": "work",
+      "environmental_factors": {"temperature": 72, "humidity": 36},
+      "activity_context": "meeting"
+    },
+    "tags": ["palpitations", "anxiety"]
+  },
+  {
+    "timestamp": "2025-08-04T20:10:00Z",
+    "user_id": "user_3",
+    "symptom_details": {
+      "symptom": "rash",
+      "severity": 4,
+      "length_minutes": 60,
+      "cause": "allergy",
+      "mediation_attempt": "none",
+      "on_medication": false,
+      "raw_notes": "Developed a red, itchy rash on the left arm after gardening. Suspect contact with a plant allergen. No swelling or pain. Rash faded after an hour without treatment.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["itching"],
+      "relief_factors": "none"
+    },
+    "environmental": {
+      "location": "outdoors",
+      "environmental_factors": {"temperature": 80, "humidity": 35},
+      "activity_context": "gardening"
+    },
+    "tags": ["rash", "allergy"]
+  },
+  {
+    "timestamp": "2025-08-03T21:00:00Z",
+    "user_id": "user_1",
+    "symptom_details": {
+      "symptom": "dizziness",
+      "severity": 5,
+      "length_minutes": 15,
+      "cause": "unknown",
+      "mediation_attempt": "hydration",
+      "on_medication": false,
+      "raw_notes": "Felt lightheaded while standing up quickly. Sat down and drank water. Dizziness resolved within 15 minutes. No nausea or headache.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "intermittent",
+      "associated_symptoms": ["lightheadedness"],
+      "relief_factors": "hydration"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 68, "humidity": 47},
+      "activity_context": "standing up"
+    },
+    "tags": ["dizziness", "unknown"]
+  },
+  {
+    "timestamp": "2025-08-02T15:30:00Z",
+    "user_id": "user_2",
+    "symptom_details": {
+      "symptom": "depression",
+      "severity": 7,
+      "length_minutes": 300,
+      "cause": "work stress",
+      "mediation_attempt": "therapy",
+      "on_medication": true,
+      "raw_notes": "Felt persistently down and unmotivated most of the afternoon. Attended a therapy session which helped a bit. Still felt tired and withdrawn. Took prescribed medication as usual.",
+      "event_complete": false,
+      "onset_type": "recurring",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["fatigue", "withdrawal"],
+      "relief_factors": "therapy"
+    },
+    "environmental": {
+      "location": "work",
+      "environmental_factors": {"temperature": 70, "humidity": 42},
+      "activity_context": "afternoon"
+    },
+    "tags": ["depression", "work stress"]
+  },
+  {
+    "timestamp": "2025-08-04T13:00:00Z",
+    "user_id": "user_3",
+    "symptom_details": {
+      "symptom": "shortness of breath",
+      "severity": 6,
+      "length_minutes": 20,
+      "cause": "exercise",
+      "mediation_attempt": "rest",
+      "on_medication": false,
+      "raw_notes": "Experienced shortness of breath after climbing stairs. Rested for a few minutes and breathing returned to normal. No chest pain or cough.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "intermittent",
+      "associated_symptoms": ["fatigue"],
+      "relief_factors": "rest"
+    },
+    "environmental": {
+      "location": "gym",
+      "environmental_factors": {"temperature": 76, "humidity": 53},
+      "activity_context": "climbing stairs"
+    },
+    "tags": ["shortness of breath", "exercise"]
+  },
+  {
+    "timestamp": "2025-08-01T10:25:00Z",
+    "user_id": "user_1",
+    "symptom_details": {
+      "symptom": "back pain",
+      "severity": 5,
+      "length_minutes": 120,
+      "cause": "injury",
+      "mediation_attempt": "therapy",
+      "on_medication": false,
+      "raw_notes": "Developed lower back pain after lifting a heavy box. Pain was dull and radiated to the right hip. Attended a physical therapy session which helped. Pain lessened by evening.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": ["hip pain"],
+      "relief_factors": "therapy"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 67, "humidity": 43},
+      "activity_context": "lifting"
+    },
+    "tags": ["back pain", "injury"]
+  },
+  {
+    "timestamp": "2025-08-03T11:45:00Z",
+    "user_id": "user_2",
+    "symptom_details": {
+      "symptom": "sore throat",
+      "severity": 3,
+      "length_minutes": 30,
+      "cause": "allergy",
+      "mediation_attempt": "hydration",
+      "on_medication": false,
+      "raw_notes": "Mild sore throat after spending time outdoors. Suspect pollen allergy. Drank water and used throat lozenges. Symptoms resolved quickly.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "intermittent",
+      "associated_symptoms": ["itchy throat"],
+      "relief_factors": "hydration"
+    },
+    "environmental": {
+      "location": "outdoors",
+      "environmental_factors": {"temperature": 82, "humidity": 33},
+      "activity_context": "outdoor activity"
+    },
+    "tags": ["sore throat", "allergy"]
+  },
+  {
+    "timestamp": "2025-08-02T18:15:00Z",
+    "user_id": "user_3",
+    "symptom_details": {
+      "symptom": "earache",
+      "severity": 4,
+      "length_minutes": 50,
+      "cause": "infection",
+      "mediation_attempt": "medication",
+      "on_medication": true,
+      "raw_notes": "Developed a dull earache in the left ear during the evening. Took prescribed antibiotics. Pain decreased after medication. No hearing loss or fever.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": ["none"],
+      "relief_factors": "medication"
+    },
+    "environmental": {
+      "location": "home",
+      "environmental_factors": {"temperature": 68, "humidity": 46},
+      "activity_context": "evening"
+    },
+    "tags": ["earache", "infection"]
+  }
+]

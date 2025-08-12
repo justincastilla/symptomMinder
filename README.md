@@ -1,5 +1,5 @@
 # ⚠️ Developer NOTE ⚠️ :
- > This project is currently in development and is not at all ready for production. The purpose is to document possibly sensitive medical information and provide a platform for analysis and visualization. There should be absolutely NO assumption of data privacy or security in this demonstration. Advice or instructions given by the seror or the llm should be taken with a grain of salt. This application demo and proof of concept is not intended for medical use and should not be used as a substitute for professional medical advice.
+ > This project is currently in development and is not at all ready for production. The purpose is to document possibly sensitive medical information and provide a platform for analysis and visualization. There should be absolutely NO assumption of data privacy or security in this demonstration. Advice or instructions given by the server or the llm should be taken with a grain of salt. This application demo and proof of concept is not intended for medical use and should not be used as a substitute for professional medical advice.
 
 # SymptomMinder FastMCP Server
 

@@ -18,11 +18,6 @@ ES_INDEX = os.environ.get("ES_INDEX", "symptom_entries")
 # Initialize Elasticsearch client
 es = AsyncElasticsearch(hosts=[ES_ENDPOINT], api_key=ES_API_KEY)
 
-# --- Anthropic API Configuration ---
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
-if not ANTHROPIC_API_KEY:
-    raise RuntimeError("ANTHROPIC_API_KEY environment variable not set.")
-
 # --- Jury Configuration ---
 JURY_MODE = os.environ.get("JURY_MODE", "every_1")  # 'none', or 'every_X' (e.g., 'every_5')
 
@@ -214,7 +209,7 @@ async def confirm_and_save_symptom_entry(entry: dict, ctx: Context) -> dict:
     name="list_symptom_entries",
     description="Retrieve symptom entries from Elasticsearch",
 )
-def list_symptom_entries(limit: int = 20) -> List[dict]:
+async def list_symptom_entries(limit: int = 20) -> List[dict]:
     """
     Retrieve the most recent symptom entries.
 
@@ -225,7 +220,7 @@ def list_symptom_entries(limit: int = 20) -> List[dict]:
         List of symptom entry dictionaries
     """
     try:
-        resp = es.search(index=ES_INDEX, size=limit, sort="timestamp:desc")
+        resp = await es.search(index=ES_INDEX, size=limit, sort="timestamp:desc")
         hits = resp["hits"]["hits"]
         return [hit["_source"] for hit in hits]
     except Exception as e:
@@ -270,11 +265,11 @@ async def flexible_search(query: dict) -> List[dict]:
         limit = query.get("limit", 20)
 
         if symptom:
-            must_clauses.append({"match": {"symptom": symptom}})
+            must_clauses.append({"match": {"symptom_details.symptom": symptom}})
         if on_medication is not None:
-            must_clauses.append({"term": {"on_medication": on_medication}})
+            must_clauses.append({"term": {"symptom_details.on_medication": on_medication}})
         if mediation_attempt:
-            must_clauses.append({"match": {"mediation_attempt": mediation_attempt}})
+            must_clauses.append({"match": {"symptom_details.mediation_attempt": mediation_attempt}})
         if start_time or end_time:
             range_query = {}
             if start_time:
@@ -284,7 +279,7 @@ async def flexible_search(query: dict) -> List[dict]:
             must_clauses.append({"range": {"timestamp": range_query}})
         if notes_query:
             must_clauses.append(
-                {"match": {"raw_notes": {"query": notes_query, "fuzziness": "AUTO"}}}
+                {"match": {"symptom_details.raw_notes": {"query": notes_query, "fuzziness": "AUTO"}}}
             )
 
         es_query = {"bool": {"must": must_clauses}} if must_clauses else {"match_all": {}}

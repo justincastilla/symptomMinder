@@ -1,9 +1,9 @@
 # ⚠️ Developer NOTE ⚠️ :
- > This project is currently in development and is not at all ready for production. The purpose is to document possibly sensitive medical information and provide a platform for analysis and visualization. There should be absolutely NO assumption of data privacy or security in this demonstration. Advice or instructions given by the server or the llm should be taken with a grain of salt. This application demo and proof of concept is not intended for medical use and should not be used as a substitute for professional medical advice.
+ > This project is currently in development and is not at all ready for production. The purpose is to document possibly sensitive medical information and provide a platform for analysis. There should be absolutely NO assumption of data privacy or security in this demonstration. Advice or instructions given by the server or the llm should be taken with a grain of salt. This application demo and proof of concept is not intended for medical use and should not be used as a substitute for professional medical advice.
 
 # SymptomMinder FastMCP Server
 
-This project is an MCP server built with FastMCP for recording symptoms and related environmental/body information, storing it in Elasticsearch, and supporting integration with Claude Desktop for user review and visualization.
+This project is an MCP server built with FastMCP for recording symptoms and related environmental/body information, storing it in Elasticsearch, and supporting integration with Claude Desktop for data entry and retrieval.
 
 ## Motivation
 Now more than ever, people are empowering themselves with tools to better understand their health and well-being. With the rise of AI and machine learning, we can use these tools to better understand our individual health through data collection and analysis. Sickness and wellness are complex, and we can't always know what the big picture is. By recording and analyzing our symptoms and related information, we can better understand our health and make informed decisions about our care. 
@@ -112,10 +112,10 @@ The server will start on `http://localhost:6274` by default. The terminal will p
 1. Ensure Claude Desktop is installed on your system.
 2. Run the install script for the FastMCP server:
     ```bash
-    $ fastmcp install claude-desktop --server-spec fastmcp_server.py --name "Symptom Minder"
+    $ fastmcp install claude-desktop --server-spec server.py --name "Symptom Minder"
     ```
 3. Restart Claude Desktop.
-4. Use the Claude Desktop interface to submit, review, and confirm symptom entries and view visualizations.
+4. Use Claude Desktop to submit, review, confirm, and query symptom entries.
 
 ---
 

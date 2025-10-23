@@ -1,0 +1,1500 @@
+[
+  {
+    "timestamp": "2025-08-24T18:57:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "intense abdominal pain",
+      "severity": 6,
+      "length_minutes": 91,
+      "cause": null,
+      "mediation_attempt": "tried tums",
+      "on_medication": false,
+      "raw_notes": "intense abdominal pain. Not sure what's causing this. tried tums.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "tried tums"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-08-25T08:07:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "energy completely drained",
+      "severity": 9,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "energy completely drained. Not sure what's causing this. took nap.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-08-26T11:42:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "intense abdominal pain",
+      "severity": 3,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "took pepto bismol",
+      "on_medication": false,
+      "raw_notes": "intense abdominal pain. Wondering if it's stress related. took pepto bismol.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-08-27T17:59:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "exhausted despite good sleep",
+      "severity": 3,
+      "length_minutes": 211,
+      "cause": null,
+      "mediation_attempt": "drank energy drink",
+      "on_medication": false,
+      "raw_notes": "exhausted despite good sleep. Wondering if it's stress related. drank energy drink.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "drank energy drink"
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-08-29T11:52:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "overwhelming tiredness",
+      "severity": 1,
+      "length_minutes": 179,
+      "cause": null,
+      "mediation_attempt": "went to bed early",
+      "on_medication": false,
+      "raw_notes": "overwhelming tiredness. This keeps happening but can't figure out pattern. went to bed early.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "went to bed early"
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-08-31T21:14:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "painful bloating and gas",
+      "severity": 9,
+      "length_minutes": 150,
+      "cause": null,
+      "mediation_attempt": "antacids",
+      "on_medication": false,
+      "raw_notes": "painful bloating and gas. Maybe I'm getting sick?. antacids.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "nausea",
+        "stomach_pain"
+      ],
+      "relief_factors": "antacids"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-01T06:59:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "abdomen feels tight and swollen",
+      "severity": 8,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "drank peppermint tea",
+      "on_medication": false,
+      "raw_notes": "abdomen feels tight and swollen. Maybe I'm getting sick?. drank peppermint tea.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "work",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-02T11:47:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "sharp stomach cramps",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "tried tums",
+      "on_medication": false,
+      "raw_notes": "sharp stomach cramps. Not sure what's causing this. tried tums.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-03T10:27:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "feeling weak and tired",
+      "severity": 2,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "feeling weak and tired. This keeps happening but can't figure out pattern. took nap.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-07T20:47:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "sharp stomach cramps",
+      "severity": 8,
+      "length_minutes": 150,
+      "cause": null,
+      "mediation_attempt": "tried tums",
+      "on_medication": false,
+      "raw_notes": "sharp stomach cramps. Wondering if it's stress related. tried tums.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "nausea"
+      ],
+      "relief_factors": "tried tums"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-08T06:02:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "energy completely drained",
+      "severity": 5,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "drank energy drink",
+      "on_medication": false,
+      "raw_notes": "energy completely drained. Wondering if it's stress related. drank energy drink.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "during work"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-09T09:38:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "feeling weak and tired",
+      "severity": 4,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "feeling weak and tired. Wondering if it's stress related. took nap.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-11T11:29:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "pressure headache",
+      "severity": 1,
+      "length_minutes": 104,
+      "cause": null,
+      "mediation_attempt": "drank more water",
+      "on_medication": false,
+      "raw_notes": "pressure headache. Maybe I'm getting sick?. drank more water.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "drank more water"
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "during commute"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-13T10:05:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "throbbing headache",
+      "severity": 1,
+      "length_minutes": 73,
+      "cause": null,
+      "mediation_attempt": "tried tylenol",
+      "on_medication": false,
+      "raw_notes": "throbbing headache. This keeps happening but can't figure out pattern. tried tylenol.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "tried tylenol"
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-14T19:46:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "stomach feels extremely distended",
+      "severity": 8,
+      "length_minutes": 180,
+      "cause": null,
+      "mediation_attempt": "antacids",
+      "on_medication": false,
+      "raw_notes": "stomach feels extremely distended. Seems random, maybe something I ate?. antacids.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": "antacids"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-15T10:06:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "severe abdominal bloating",
+      "severity": 10,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "gentle stomach massage",
+      "on_medication": false,
+      "raw_notes": "severe abdominal bloating. Feeling awful again, no idea why. gentle stomach massage.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-16T09:53:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "difficulty concentrating",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": null,
+      "mediation_attempt": "got fresh air",
+      "on_medication": false,
+      "raw_notes": "difficulty concentrating. This keeps happening but can't figure out pattern. got fresh air.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "during commute"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-19T16:28:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "feeling weak and tired",
+      "severity": 3,
+      "length_minutes": 179,
+      "cause": null,
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "feeling weak and tired. Maybe I'm getting sick?. took nap.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "took nap"
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "at Sunday dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-21T19:28:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "stabbing pains in upper abdomen",
+      "severity": 10,
+      "length_minutes": 167,
+      "cause": "food related",
+      "mediation_attempt": "took pepto bismol",
+      "on_medication": false,
+      "raw_notes": "stabbing pains in upper abdomen. Maybe something at family dinners?. took pepto bismol.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "bloating"
+      ],
+      "relief_factors": "took pepto bismol"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-22T10:13:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "overwhelming tiredness",
+      "severity": 8,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "had extra coffee",
+      "on_medication": false,
+      "raw_notes": "overwhelming tiredness. Starting to think it's food related. had extra coffee.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-23T13:26:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "burning sensation in stomach",
+      "severity": 3,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "tried tums",
+      "on_medication": false,
+      "raw_notes": "burning sensation in stomach. Maybe something at family dinners?. tried tums.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-26T15:15:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "energy completely drained",
+      "severity": 1,
+      "length_minutes": 104,
+      "cause": "food related",
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "energy completely drained. Monday mornings are always rough lately. took nap.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "took nap"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-27T15:16:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "migraine-like pain",
+      "severity": 3,
+      "length_minutes": 137,
+      "cause": "food related",
+      "mediation_attempt": "applied cold compress",
+      "on_medication": false,
+      "raw_notes": "migraine-like pain. Monday mornings are always rough lately. applied cold compress.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "applied cold compress"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "watching TV"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-09-28T19:44:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "stabbing pains in upper abdomen",
+      "severity": 10,
+      "length_minutes": 66,
+      "cause": "food related",
+      "mediation_attempt": "took ibuprofen",
+      "on_medication": false,
+      "raw_notes": "stabbing pains in upper abdomen. Starting to think it's food related. took ibuprofen.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "nausea"
+      ],
+      "relief_factors": "took ibuprofen"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-29T09:00:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "watery diarrhea",
+      "severity": 7,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "ate bland foods",
+      "on_medication": false,
+      "raw_notes": "watery diarrhea. Pattern seems to be Sunday night into Monday. ate bland foods.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "work",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-09-30T09:22:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "overwhelming tiredness",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "tried B vitamins",
+      "on_medication": false,
+      "raw_notes": "overwhelming tiredness. Maybe something at family dinners?. tried B vitamins.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "work",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-02T10:20:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "dull headache behind eyes",
+      "severity": 2,
+      "length_minutes": 121,
+      "cause": "food related",
+      "mediation_attempt": "laid in dark room",
+      "on_medication": false,
+      "raw_notes": "dull headache behind eyes. This seems to happen on weekends often. laid in dark room.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "laid in dark room"
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-03T17:43:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "dull headache behind eyes",
+      "severity": 1,
+      "length_minutes": 148,
+      "cause": "food related",
+      "mediation_attempt": "took advil",
+      "on_medication": false,
+      "raw_notes": "dull headache behind eyes. Maybe something at family dinners?. took advil.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "took advil"
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "during commute"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-05T18:25:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "abdomen feels tight and swollen",
+      "severity": 10,
+      "length_minutes": 93,
+      "cause": "food related",
+      "mediation_attempt": "gentle stomach massage",
+      "on_medication": false,
+      "raw_notes": "abdomen feels tight and swollen. Maybe something at family dinners?. gentle stomach massage.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "nausea",
+        "stomach_pain"
+      ],
+      "relief_factors": "gentle stomach massage"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-10-06T07:47:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "pressure headache",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "laid in dark room",
+      "on_medication": false,
+      "raw_notes": "pressure headache. This seems to happen on weekends often. laid in dark room.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-07T10:19:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "dull aching stomach pain",
+      "severity": 7,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "laid on heating pad",
+      "on_medication": false,
+      "raw_notes": "dull aching stomach pain. Maybe something at family dinners?. laid on heating pad.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "during work"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-10-08T12:49:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "tension headache",
+      "severity": 2,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "drank more water",
+      "on_medication": false,
+      "raw_notes": "tension headache. Pattern seems to be Sunday night into Monday. drank more water.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-11T10:48:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "overwhelming tiredness",
+      "severity": 3,
+      "length_minutes": 92,
+      "cause": "food related",
+      "mediation_attempt": "tried B vitamins",
+      "on_medication": false,
+      "raw_notes": "overwhelming tiredness. This seems to happen on weekends often. tried B vitamins.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "tried B vitamins"
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "watching TV"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-12T20:12:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "feeling queasy and sick",
+      "severity": 7,
+      "length_minutes": 169,
+      "cause": "food related",
+      "mediation_attempt": "sipped ginger ale",
+      "on_medication": false,
+      "raw_notes": "feeling queasy and sick. Monday mornings are always rough lately. sipped ginger ale.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": "sipped ginger ale"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-10-13T11:48:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "stomach feels extremely distended",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "heating pad on stomach",
+      "on_medication": false,
+      "raw_notes": "stomach feels extremely distended. Pattern seems to be Sunday night into Monday. heating pad on stomach.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-10-14T09:37:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "overwhelming tiredness",
+      "severity": 4,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "went to bed early",
+      "on_medication": false,
+      "raw_notes": "overwhelming tiredness. Maybe something at family dinners?. went to bed early.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "during commute"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-15T11:05:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "throbbing headache",
+      "severity": 3,
+      "length_minutes": 274,
+      "cause": "food related",
+      "mediation_attempt": "applied cold compress",
+      "on_medication": false,
+      "raw_notes": "throbbing headache. Noticed this happens after big meals. applied cold compress.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "applied cold compress"
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "during commute"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-19T20:14:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "uncomfortable bloating after eating",
+      "severity": 8,
+      "length_minutes": 114,
+      "cause": "food related",
+      "mediation_attempt": "antacids",
+      "on_medication": false,
+      "raw_notes": "uncomfortable bloating after eating. Starting to think it's food related. antacids.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "stomach_pain",
+        "nausea"
+      ],
+      "relief_factors": "antacids"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-10-20T09:17:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "pressure headache",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "tried tylenol",
+      "on_medication": false,
+      "raw_notes": "pressure headache. This seems to happen on weekends often. tried tylenol.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "work",
+      "activity_context": "at Sunday dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-21T13:47:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "burning sensation in stomach",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "laid on heating pad",
+      "on_medication": false,
+      "raw_notes": "burning sensation in stomach. Monday mornings are always rough lately. laid on heating pad.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "during commute"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-10-22T13:30:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "exhausted despite good sleep",
+      "severity": 1,
+      "length_minutes": 64,
+      "cause": "food related",
+      "mediation_attempt": "had extra coffee",
+      "on_medication": false,
+      "raw_notes": "exhausted despite good sleep. Starting to think it's food related. had extra coffee.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "had extra coffee"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-26T18:48:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "uncomfortable bloating after eating",
+      "severity": 9,
+      "length_minutes": 175,
+      "cause": "food related",
+      "mediation_attempt": "drank peppermint tea",
+      "on_medication": false,
+      "raw_notes": "uncomfortable bloating after eating. Monday mornings are always rough lately. drank peppermint tea.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "nausea",
+        "stomach_pain"
+      ],
+      "relief_factors": "drank peppermint tea"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-10-27T12:46:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "extreme fatigue",
+      "severity": 6,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "extreme fatigue. Monday mornings are always rough lately. took nap.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "during work"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-28T14:59:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "feeling weak and tired",
+      "severity": 3,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "drank energy drink",
+      "on_medication": false,
+      "raw_notes": "feeling weak and tired. Monday mornings are always rough lately. drank energy drink.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-10-29T09:02:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "energy completely drained",
+      "severity": 1,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "drank energy drink",
+      "on_medication": false,
+      "raw_notes": "energy completely drained. Pattern seems to be Sunday night into Monday. drank energy drink.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "relaxing at home"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-02T19:52:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "stabbing pains in upper abdomen",
+      "severity": 10,
+      "length_minutes": 136,
+      "cause": "food related",
+      "mediation_attempt": "laid on heating pad",
+      "on_medication": false,
+      "raw_notes": "stabbing pains in upper abdomen. Pattern seems to be Sunday night into Monday. laid on heating pad.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "nausea"
+      ],
+      "relief_factors": "laid on heating pad"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-11-03T11:58:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "throbbing headache",
+      "severity": 5,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "took advil",
+      "on_medication": false,
+      "raw_notes": "throbbing headache. Monday mornings are always rough lately. took advil.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-04T10:28:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "brain fog and confusion",
+      "severity": 5,
+      "length_minutes": null,
+      "cause": "food related",
+      "mediation_attempt": "got fresh air",
+      "on_medication": false,
+      "raw_notes": "brain fog and confusion. Maybe something at family dinners?. got fresh air.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-05T10:44:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "overwhelming tiredness",
+      "severity": 5,
+      "length_minutes": null,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "overwhelming tiredness. Avoiding gluten for a week to test theory. took nap.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "work",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-08T09:56:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "tension headache",
+      "severity": 3,
+      "length_minutes": 115,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "drank more water",
+      "on_medication": false,
+      "raw_notes": "tension headache. Avoiding gluten for a week to test theory. drank more water.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "drank more water"
+    },
+    "environmental": {
+      "location": "work",
+      "activity_context": "during work"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-09T18:22:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "mild nausea throughout day",
+      "severity": 6,
+      "length_minutes": 30,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "sipped ginger ale",
+      "on_medication": false,
+      "raw_notes": "mild nausea throughout day. Pretty sure it's gluten sensitivity now. sipped ginger ale.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "sipped ginger ale"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-11-10T11:48:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "dull headache behind eyes",
+      "severity": 8,
+      "length_minutes": null,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "tried tylenol",
+      "on_medication": false,
+      "raw_notes": "dull headache behind eyes. Gluten elimination seems to be helping. tried tylenol.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "work",
+      "activity_context": "trying to sleep"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-11T08:58:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "extreme fatigue",
+      "severity": 3,
+      "length_minutes": null,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "drank energy drink",
+      "on_medication": false,
+      "raw_notes": "extreme fatigue. Skipped bread rolls yesterday - felt much better today. drank energy drink.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-12T17:13:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "extreme fatigue",
+      "severity": 4,
+      "length_minutes": null,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "extreme fatigue. Skipped bread rolls yesterday - felt much better today. took nap.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "at Sunday dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-15T17:35:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "exhausted despite good sleep",
+      "severity": 1,
+      "length_minutes": 178,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "took nap",
+      "on_medication": false,
+      "raw_notes": "exhausted despite good sleep. Skipped bread rolls yesterday - felt much better today. took nap.",
+      "event_complete": true,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": "took nap"
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "at Sunday dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-16T18:50:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "uncomfortable bloating after eating",
+      "severity": 8,
+      "length_minutes": 83,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "drank peppermint tea",
+      "on_medication": false,
+      "raw_notes": "uncomfortable bloating after eating. Gluten elimination seems to be helping. drank peppermint tea.",
+      "event_complete": true,
+      "onset_type": "gradual",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [
+        "nausea",
+        "stomach_pain"
+      ],
+      "relief_factors": "drank peppermint tea"
+    },
+    "environmental": {
+      "location": "parents house",
+      "activity_context": "after family dinner"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-11-17T10:50:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "feeling weak and tired",
+      "severity": 8,
+      "length_minutes": null,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "drank energy drink",
+      "on_medication": false,
+      "raw_notes": "feeling weak and tired. Gluten elimination seems to be helping. drank energy drink.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "constant",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "restaurant",
+      "activity_context": "during work"
+    },
+    "tags": [
+      "neurological"
+    ]
+  },
+  {
+    "timestamp": "2025-11-18T12:02:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "stabbing pains in upper abdomen",
+      "severity": 3,
+      "length_minutes": null,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "took ibuprofen",
+      "on_medication": false,
+      "raw_notes": "stabbing pains in upper abdomen. Think it might be gluten - Sunday dinner always has bread. took ibuprofen.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "home",
+      "activity_context": "during commute"
+    },
+    "tags": [
+      "digestive"
+    ]
+  },
+  {
+    "timestamp": "2025-11-19T13:13:00",
+    "user_id": "demo_user_gluten_story",
+    "symptom_details": {
+      "symptom": "pressure headache",
+      "severity": 2,
+      "length_minutes": null,
+      "cause": "gluten sensitivity",
+      "mediation_attempt": "took advil",
+      "on_medication": false,
+      "raw_notes": "pressure headache. Gluten elimination seems to be helping. took advil.",
+      "event_complete": false,
+      "onset_type": "sudden",
+      "intensity_pattern": "waxing/waning",
+      "associated_symptoms": [],
+      "relief_factors": null
+    },
+    "environmental": {
+      "location": "family dinner",
+      "activity_context": "at Sunday dinner"
+    },
+    "tags": [
+      "neurological"
+    ]
+  }
+]

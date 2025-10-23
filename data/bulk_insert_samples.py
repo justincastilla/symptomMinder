@@ -1,16 +1,26 @@
 import os
 import asyncio
 import json
+import sys
+from pathlib import Path
+from dotenv import load_dotenv
 from elasticsearch import AsyncElasticsearch
 
-ES_URL = os.environ.get("ES_ENDPOINT", "http://localhost:9200")
+# Add parent directory to path so we can import from utils
+parent_dir = Path(__file__).parent.parent
+sys.path.append(str(parent_dir))
+
+# Load environment variables from .env file (override shell env vars)
+load_dotenv(parent_dir / ".env", override=True)
+
+from utils.es_utils import create_es_client
+
 ES_INDEX = os.environ.get("ES_INDEX", "symptom_entries")
-ES_API_KEY = os.environ.get("ES_API_KEY")
 SAMPLE_FILE = os.path.join(os.path.dirname(__file__), "sample_symptom_entries.json")
 
 async def main():
-    headers = {"Authorization": f"ApiKey {ES_API_KEY}"} if ES_API_KEY else None
-    es = AsyncElasticsearch(ES_URL, headers=headers) if headers else AsyncElasticsearch(ES_URL)
+    es = create_es_client()
+
     # Complete index mapping for all fields
     mapping = {
         "mappings": {
@@ -52,23 +62,31 @@ async def main():
             }
         }
     }
+
     # Delete index if exists (for idempotency in testing)
     if await es.indices.exists(index=ES_INDEX):
         await es.indices.delete(index=ES_INDEX)
-    await es.indices.create(index=ES_INDEX, body=mapping)
+
+    # Create index with modern API (mappings, not body)
+    await es.indices.create(index=ES_INDEX, mappings=mapping["mappings"])
+
     with open(SAMPLE_FILE, "r") as f:
         entries = json.load(f)
+
     actions = []
     for entry in entries:
         actions.append({"index": {"_index": ES_INDEX}})
         actions.append(entry)
+
     # Bulk insert with longer timeout
     es_with_timeout = es.options(request_timeout=120)
     resp = await es_with_timeout.bulk(operations=actions)
+
     if not resp.get('errors', True):
         print("Bulk insert successful: All sample entries were loaded into Elasticsearch.")
     else:
         print(f"Bulk insert completed with errors: {resp}")
+
     await es.close()
 
 if __name__ == "__main__":

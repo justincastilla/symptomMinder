@@ -9,6 +9,10 @@ RUN pip install --no-cache-dir aiohttp>=3.12.15 anthropic>=0.61.0 elasticsearch>
 COPY server.py .
 COPY symptom_schema.py .
 COPY jury_tools.py .
+COPY utils/ utils/
+COPY tools/ tools/
+COPY resources/ resources/
+COPY prompts/ prompts/
 
 # Set environment variable for unbuffered output
 ENV PYTHONUNBUFFERED=1

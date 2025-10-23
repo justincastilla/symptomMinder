@@ -18,26 +18,19 @@ cp .env.example .env
 
 Required variables:
 - `ANTHROPIC_API_KEY` - Your Anthropic API key
-- `ES_ENDPOINT` - Elasticsearch endpoint
-- `ES_API_KEY` - Elasticsearch API key (if needed)
-- `ES_INDEX`, `JURY_SUMMARY_INDEX`, `JURY_COUNTER_INDEX` - Index names
-- `JURY_MODE` - Jury trigger mode (optional)
+- `ES_ENDPOINT` - Elasticsearch endpoint (default: `http://localhost:9200`)
+- `ES_API_KEY` - Elasticsearch API key (optional for local instances)
+- `ES_INDEX` - Symptom entries index (default: `symptom_entries`)
+- `JURY_SUMMARY_INDEX` - Jury summaries index (default: `event_summaries`)
+- `JURY_COUNTER_INDEX` - Jury counter index (default: `jury_counter`)
+- `JURY_MODE` - Jury trigger mode: `none`, `every_1`, `every_5`, etc. (default: `every_1`)
 
 **2. Build and Run:**
 ```bash
 # Build the Docker image
 docker build -t symptom-minder .
 
-# Start Elasticsearch (if not using external)
-docker-compose up -d elasticsearch
-
-# For Claude Desktop integration, see CLAUDE_DESKTOP_SETUP.md
-# Uses: docker run -i --rm --env-file .env symptom-minder
-```
-
-**Testing with docker-compose:**
-```bash
-# Start all services (ES + MCP server)
+# Start all services (Elasticsearch + MCP server)
 docker-compose up -d
 
 # View server logs
@@ -52,6 +45,7 @@ docker-compose down -v
 
 **Access Points:**
 - Elasticsearch: `http://localhost:9200`
+- Elasticsearch healthcheck: `curl http://localhost:9200/_cluster/health`
 
 ### Local Python Setup (Alternative)
 
@@ -60,8 +54,12 @@ docker-compose down -v
 uv venv
 source .venv/bin/activate  # macOS/Linux
 
-# Install dependencies
-uv sync
+# Install dependencies (two methods)
+# Option 1: Using uv (faster)
+uv pip install -r requirements.txt
+
+# Option 2: Using pip
+pip install -r requirements.txt
 
 # Run development server with inspector
 fastmcp dev server.py
@@ -89,14 +87,12 @@ SymptomMinder uses a **review-confirm-save** pattern for data entry. The system 
 
 ### Key Components
 
-**server.py** - Main FastMCP server with MCP tools and resources
-- **Entry Tools:** `review_symptom_entry`, `confirm_and_save_symptom_entry`
-- **Query Tools:** `flexible_search`, `get_incomplete_symptoms`
-- **Update Tools:** `update_symptom_entry`
-- **Resources:** `list_symptom_entries` (retrieves recent entries)
-- **Prompts:** `symptom_followup_guidance` (guides Claude on natural follow-up behavior)
-- Implements jury trigger logic with persistent counter in Elasticsearch
-- Handles null value normalization and raw notes preservation
+**server.py** - Main FastMCP server entry point
+- Initializes Elasticsearch client with environment-based configuration
+- Registers all MCP tools, resources, and prompts using FastMCP decorators
+- Delegates implementation to modular components in `tools/`, `resources/`, and `prompts/`
+- Implements jury trigger logic with persistent counter (server.py:146-156)
+- **Pattern:** Thin wrapper functions delegate to `*_impl()` functions for testability and separation of concerns
 
 **symptom_schema.py** - Pydantic data models enforcing structure
 - `SymptomEntry` - Top-level entry (timestamp, user_id, symptom_details, environmental, tags)
@@ -106,8 +102,26 @@ SymptomMinder uses a **review-confirm-save** pattern for data entry. The system 
 **jury_tools.py** - Multi-model LLM validation system
 - `llm_jury_compare_notes()` - Validates structured entry against raw notes
 - Runs 3 Claude models in parallel: claude-3-5-sonnet-latest, claude-3-7-sonnet-latest, claude-sonnet-4-20250514
-- Aggregation model compiles findings into markdown table
+- Aggregation model (claude-sonnet-4-20250514) compiles findings into markdown table
 - Results saved to `JURY_SUMMARY_INDEX` for quality tracking
+- Uses `asyncio.gather()` for parallel model execution (jury_tools.py:100-102)
+
+**Modular Implementation Structure:**
+```
+tools/
+  symptom_tools.py    - Entry review and save implementations
+  search_tools.py     - Search, query, and update implementations
+resources/
+  symptom_resources.py - List entries resource implementation
+prompts/
+  followup_prompts.py  - Follow-up guidance prompt implementation
+utils/
+  data_utils.py       - Null value normalization, raw notes preservation
+  es_utils.py         - Elasticsearch ID extraction, jury counter management
+  prompt_utils.py     - Review prompt generation
+```
+
+All tool implementations follow the pattern: `server.py` contains MCP decorator → delegates to `*_impl()` function in appropriate module. This enables unit testing and separates FastMCP framework concerns from business logic.
 
 ### Data Schema
 
@@ -198,15 +212,17 @@ Track incomplete/ongoing symptoms and gather follow-up data naturally without an
 
 ### Data Cleaning Pipeline
 
-**Null Value Normalization (server.py:61-89)**
+**Null Value Normalization (utils/data_utils.py:clean_entry)**
 - Recognizes null-like strings: `"none"`, `"null"`, `"n/a"`, `"na"`, `"nil"`, `""` (case-insensitive)
 - Converts to `None` for scalar fields, `[]` for list fields
 - `associated_symptoms` always normalized to list type
+- Applied before validation and save
 
-**Raw Notes Preservation (server.py:92-114)**
+**Raw Notes Preservation (utils/data_utils.py:ensure_raw_notes)**
 - `raw_notes` field populated from user input before save
 - Fallback chain: `description` → `notes` → `summary` → `context`
 - Essential for accurate jury validation
+- Called in `confirm_and_save_symptom_entry_impl` (tools/symptom_tools.py:142)
 
 ### Elasticsearch Considerations
 
@@ -214,7 +230,10 @@ Track incomplete/ongoing symptoms and gather follow-up data naturally without an
 Always use nested paths in queries: `symptom_details.symptom`, `symptom_details.on_medication`, NOT top-level field names.
 
 **Response Extraction:**
-Use `_get_es_response_id()` helper (server.py:117-131) to safely extract document IDs from responses (handles both dict and object types).
+Use `get_es_response_id()` helper (utils/es_utils.py:11-25) to safely extract document IDs from responses (handles both dict and object types).
+
+**Jury Counter:**
+Persistent counter stored in Elasticsearch (`JURY_COUNTER_INDEX`, doc ID: `global_counter`). Managed by `get_jury_counter()` and `increment_jury_counter()` in utils/es_utils.py:28-49.
 
 ### Async Patterns
 
@@ -228,8 +247,16 @@ All MCP tools receive `ctx: Context` parameter for logging. Use `ctx.error()` fo
 
 ## Requirements
 
-- **Python:** 3.12+ (pyproject.toml)
-- **Key Dependencies:** fastmcp, elasticsearch, anthropic, pydantic
+- **Python:** 3.12+ (Dockerfile specifies python:3.12-slim)
+- **Key Dependencies:**
+  - `fastmcp>=2.0.0` - FastMCP framework for MCP server
+  - `elasticsearch>=9.1.0` - Async Elasticsearch client
+  - `anthropic>=0.61.0` - Anthropic API for LLM jury
+  - `aiohttp>=3.12.15` - Async HTTP client
+  - `pydantic` - Data validation (via fastmcp)
+  - `python-dotenv` - Environment variable management
+  - `uv>=0.1.0` - Fast Python package installer
+  - `fastapi>=0.100.0`, `uvicorn>=0.24.0` - FastMCP dependencies
 
 ## Security Notice
 

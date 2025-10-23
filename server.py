@@ -263,28 +263,41 @@ async def symptom_followup_guidance() -> str:
 @mcp.tool(
     name="flexible_search",
     description=(
-        "Flexible search for symptom entries using a query object. "
-        "Accepts a dict of filters, supporting semantic search and field filters."
+        "Search symptom entries using simple filters (NOT raw Elasticsearch queries). "
+        "Pass a flat dict with filter keys like start_time, end_time, symptom, etc. "
+        "DO NOT use nested Elasticsearch query syntax - use simple key-value pairs."
     ),
 )
 async def flexible_search(query: dict) -> List[dict]:
     """
-    Flexible search for symptom entries.
+    Flexible search for symptom entries using simplified filter parameters.
 
-    Accepts a query dict with any of these keys:
-        - symptom: str
-        - on_medication: bool
-        - mediation_attempt: str
-        - start_time: str (ISO8601)
-        - end_time: str (ISO8601)
-        - notes_query: str
-        - limit: int (default 20)
+    IMPORTANT: Pass a FLAT dictionary with simple key-value pairs, NOT nested Elasticsearch queries.
+
+    Supported filter keys (all optional):
+        - start_time: str (ISO8601 date/datetime, e.g., "2025-08-24" or "2025-08-24T10:00:00")
+        - end_time: str (ISO8601 date/datetime, e.g., "2025-09-01")
+        - symptom: str (fuzzy match on symptom description, e.g., "headache")
+        - on_medication: bool (true/false)
+        - mediation_attempt: str (what was tried to relieve symptom, e.g., "advil")
+        - notes_query: str (semantic search in raw_notes field)
+        - limit: int (max results, default 20)
+
+    Example queries:
+        # Date range search
+        {"start_time": "2025-08-01", "end_time": "2025-08-31", "limit": 50}
+
+        # Symptom search with date filter
+        {"symptom": "headache", "start_time": "2025-09-01"}
+
+        # Search notes for keywords
+        {"notes_query": "gluten bread"}
 
     Args:
-        query: Dictionary containing search filters
+        query: Dictionary containing simple filter key-value pairs (NOT nested ES query syntax)
 
     Returns:
-        List of matching symptom entries
+        List of matching symptom entries, sorted by timestamp descending (most recent first)
     """
     return await flexible_search_impl(es=es, es_index=ES_INDEX, query=query)
 

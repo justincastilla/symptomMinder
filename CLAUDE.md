@@ -85,6 +85,42 @@ SymptomMinder uses a **review-confirm-save** pattern for data entry. The system 
 6. **Query/Retrieval** → `flexible_search` or `list_symptom_entries` resource
 7. **Follow-up** (optional) → `get_incomplete_symptoms` and `update_symptom_entry` for ongoing tracking
 
+### Searching Symptoms
+
+**flexible_search Tool - IMPORTANT:**
+This is a **simplified abstraction** over Elasticsearch, NOT a raw ES query interface.
+
+**CORRECT usage (flat key-value pairs):**
+```python
+{
+    "start_time": "2025-08-01",
+    "end_time": "2025-08-31",
+    "symptom": "headache",
+    "limit": 50
+}
+```
+
+**INCORRECT usage (nested ES query syntax):**
+```python
+# ❌ DO NOT DO THIS - Will not work!
+{
+    "query": {
+        "range": {
+            "timestamp": {"gte": "2025-08-01"}
+        }
+    }
+}
+```
+
+**Supported filter keys:**
+- `start_time` - ISO8601 date/datetime (e.g., "2025-08-24" or "2025-08-24T10:00:00")
+- `end_time` - ISO8601 date/datetime
+- `symptom` - Fuzzy match on symptom description
+- `on_medication` - Boolean filter
+- `mediation_attempt` - What was tried to relieve symptom
+- `notes_query` - Semantic search in raw_notes field
+- `limit` - Max results (default: 20)
+
 ### Key Components
 
 **server.py** - Main FastMCP server entry point
